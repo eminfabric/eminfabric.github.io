@@ -5,6 +5,7 @@
 */
 window.SHOP = {
   name: "Ткани • Мадина Новый Север-22",
+  wholesaleOnly: true,
   address: "Рынок Мадина, Новый Север-22, Бишкек",
   whatsapp: "996502982798",
   whatsapp2: "996501915793",

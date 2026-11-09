@@ -28,7 +28,7 @@
     P.filter(function (p) { return filter === "all" || p.group === filter; }).forEach(function (p) {
       var li = document.createElement("li");
       li.className = "card";
-      var msg = "Здравствуйте! Интересует ткань: " + p.name + ", код " + p.code + " (№" + p.n + ").";
+      var msg = "Здравствуйте! Интересует ткань оптом: " + p.name + ", код " + p.code + " (№" + p.n + ").";
       var media = p.img
         ? '<img loading="lazy" src="' + p.img + '" alt="' + p.name + ', код ' + p.code + '">'
         : '<div class="ph" aria-hidden="true"><span>' + p.code + '</span><small>фото скоро</small></div>';
