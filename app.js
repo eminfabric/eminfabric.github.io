@@ -60,6 +60,8 @@
   window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(reveal); } }, { passive: true });
   window.addEventListener("resize", reveal);
   reveal(); setTimeout(reveal, 300);
+  // safety: never leave products hidden (fast scroll, screenshots, old browsers)
+  setTimeout(function () { pending.forEach(function (c) { c.classList.add("in"); }); pending = []; }, 2500);
 
   // active tab
   var spy = new IntersectionObserver(function (es) {
