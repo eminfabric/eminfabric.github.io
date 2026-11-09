@@ -18,7 +18,7 @@ window.SHOP = {
 window.PRODUCTS = [
   { n: "01", name: "Жаккард", color: "цветной набор", code: "26",      group: "zhakkard", collection: "Жаккард 26",   img: "img/01-zhakkard-26.webp" },
   { n: "02", name: "Жаккард", color: "серый",         code: "26-11",   group: "zhakkard", collection: "Жаккард 26",   img: "img/02-zhakkard-26-11.webp", wa: "https://wa.me/p/6656798011076559/996502982798" },
-  { n: "03", name: "Жаккард", color: "тёмно-серый",   code: "26",      group: "zhakkard", collection: "Жаккард 26",   img: null },
+  { n: "03", name: "Жаккард", color: "чёрный",        code: "26-1",    group: "zhakkard", collection: "Жаккард 26",   img: "img/03-zhakkard-26-1.webp", wa: "https://wa.me/p/6221673367937965/996502982798" },
   { n: "04", name: "Жаккард", color: "молочный",      code: "8817-12", group: "zhakkard", collection: "Жаккард 8817", img: null },
   { n: "05", name: "Жаккард", color: "коричневый",    code: "8817-10", group: "zhakkard", collection: "Жаккард 8817", img: null },
   { n: "06", name: "Жаккард", color: "зелёный",       code: "8817-27", group: "zhakkard", collection: "Жаккард 8817", img: null },
