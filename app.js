@@ -82,6 +82,7 @@
     document.getElementById("sh-title").textContent = title(p);
     document.getElementById("sh-code").textContent = p.code;
     document.getElementById("sh-order").href = wa(S.whatsapp, orderMsg(p));
+    var w = document.getElementById("sh-wa"); w.hidden = !p.wa; if (p.wa) w.href = p.wa;
   }
   function open(i) { show(i); sheet.hidden = false; document.body.style.overflow = "hidden"; }
   function close() { sheet.hidden = true; document.body.style.overflow = ""; }
