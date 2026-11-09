@@ -5,7 +5,8 @@
   function each(s, f) { document.querySelectorAll(s).forEach(f); }
   function fmt(n) { return "+" + n.slice(0, 3) + " " + n.slice(3, 6) + " " + n.slice(6, 9) + " " + n.slice(9); }
   function ext(a) { a.target = "_blank"; a.rel = "noopener"; }
-  function orderMsg(p) { return "Здравствуйте! Ткань оптом: " + p.name + ", код " + p.code + " (№" + p.n + "). Рулонов: "; }
+  function title(p) { return p.name + (p.color ? ", " + p.color : ""); }
+  function orderMsg(p) { return "Здравствуйте! Ткань оптом: " + title(p) + ", код " + p.code + " (№" + p.n + "). Рулонов: "; }
   function slug(s) { return "c-" + s.toLowerCase().replace(/[^a-zа-яё0-9]+/gi, "-"); }
 
   each("[data-wa]", function (a) { a.href = wa(S.whatsapp, hello); ext(a); });
@@ -38,7 +39,7 @@
       li.className = "card"; li.tabIndex = 0; li.style.transitionDelay = (i % 4) * 70 + "ms";
       li.dataset.idx = P.indexOf(p);
       li.innerHTML = (p.img ? '<img loading="lazy" src="' + p.img + '" alt="' + p.name + ' ' + p.code + '">' : '<div class="ph"><span>фото скоро</span></div>') +
-        '<div class="card__cap"><div><h3>' + p.name + '</h3><p>' + p.code + '</p></div>' +
+        '<div class="card__cap"><div><h3>' + title(p) + '</h3><p>' + p.code + '</p></div>' +
         '<a class="card__go" target="_blank" rel="noopener" aria-label="Заказать в WhatsApp" href="' + wa(S.whatsapp, orderMsg(p)) + '"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></a></div>';
       ul.appendChild(li);
     });
@@ -76,7 +77,7 @@
     cur = (i + P.length) % P.length; var p = P[cur];
     document.getElementById("sh-media").innerHTML = p.img ? '<img src="' + p.img + '" alt="' + p.name + ' ' + p.code + '">' : '<div class="ph"><span>фото скоро</span></div>';
     document.getElementById("sh-col").textContent = p.collection + " · №" + p.n;
-    document.getElementById("sh-title").textContent = p.name;
+    document.getElementById("sh-title").textContent = title(p);
     document.getElementById("sh-code").textContent = p.code;
     document.getElementById("sh-order").href = wa(S.whatsapp, orderMsg(p));
   }
