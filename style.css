@@ -91,6 +91,10 @@ main { padding: 18px 0 40px; }
 .sheet__info h3 { font: 600 24px/1.15 var(--display); }
 .sheet__code { color: var(--muted); }
 .sheet__code b { color: var(--ink); font-family: var(--display); }
+.sheet__spec { font-size: 14px; }
+.sheet__use { color: var(--muted); font-size: 13.5px; }
+.sheet__spec[hidden], .sheet__use[hidden] { display: none; }
+.sheet__note { margin-top: 4px; padding: 8px 12px; border-radius: 12px; background: #eef0f4; color: var(--navy-2); font-size: 13px; align-self: flex-start; }
 .sheet__order { margin-top: auto; height: 54px; border-radius: 999px; background: var(--wa); color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 700; }
 .sheet__wa { text-align: center; color: var(--muted); font-size: 13.5px; padding: 4px 0; }
 .sheet__wa:hover { color: var(--ink); }

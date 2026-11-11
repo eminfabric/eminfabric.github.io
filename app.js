@@ -8,6 +8,7 @@
       t1: "Оптом", t2: "Премиум ткани", t3: "Рынок Ала-Тоо (бывш. Мадина), A2/1-22",
       code: "Код", order: "Заказать", openwa: "Открыть в каталоге WhatsApp ↗",
       soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A2/1-22", orderAria: "Заказать в WhatsApp",
+      note: "Только оптом · рулонами (~100 м)", use: "Для: ",
       hello: "Здравствуйте! Пишу с сайта.",
       msg: function (t, code, n) { return "Здравствуйте! Ткань оптом: " + t + ", код " + code + " (№" + n + "). Рулонов: "; },
       title: "Ткани оптом · Ала-Тоо A2/1-22"
@@ -17,6 +18,7 @@
       t1: "Wholesale", t2: "Premium fabrics", t3: "Ala-Too Market (ex-Madina), A2/1-22",
       code: "Code", order: "Order", openwa: "Open in WhatsApp catalog ↗",
       soon: "photo soon", addr: "Ala-Too Market, Block A, A2/1-22", orderAria: "Order on WhatsApp",
+      note: "Wholesale only · by the roll (~100 m)", use: "For: ",
       hello: "Hello! I'm writing from your website.",
       msg: function (t, code, n) { return "Hello! Wholesale fabric: " + t + ", code " + code + " (No. " + n + "). Rolls: "; },
       title: "Wholesale fabrics · Ala-Too A2/1-22"
@@ -31,7 +33,23 @@
     "цветной набор": "multicolour set", "серый": "grey", "чёрный": "black", "серебристый": "silver",
     "коричневый": "brown", "зелёный": "green", "голубой": "light blue", "оливковый": "olive",
     "тёмно-зелёный": "dark green", "тёмно-синий": "navy",
-    "Стрейч хлопок-лён, лёгкий и дышащий": "Stretch cotton-linen, light and breathable"
+    "Стрейч хлопок-лён, лёгкий и дышащий": "Stretch cotton-linen, light and breathable",
+    // current catalog (series / names)
+    "Х/Б стрейч T/C K": "Stretch cotton T/C K", "Х/Б полоска 58": "Cotton stripe 58", "Х/Б полоска 61B": "Cotton stripe 61B",
+    "Лён Х/Б полоска 68": "Linen-cotton stripe 68", "Лён Х/Б полоска 69": "Linen-cotton stripe 69",
+    "Х/Б Cotton полоска P127": "Quilted cotton stripe P127",
+    "Х/Б полоска": "Cotton stripe", "Лён Х/Б полоска": "Linen-cotton stripe", "Х/Б Cotton полоска, стёганая": "Quilted cotton stripe",
+    // colours
+    "ярко-синий": "royal blue", "сиреневый": "lilac", "фиолетовый": "purple", "фисташковый": "pistachio",
+    "коньячный": "cognac", "малиновый": "crimson", "сине-фиолетовый": "violet", "жёлтый": "yellow",
+    "тёмно-синяя полоска": "navy stripe", "бордовая полоска": "burgundy stripe", "оливковая полоска": "olive stripe",
+    "серо-голубая полоска": "grey-blue stripe", "голубая полоска": "light blue stripe", "синяя полоска": "blue stripe",
+    "серая полоска": "grey stripe", "жёлтая полоска": "yellow stripe", "бежевая полоска": "beige stripe",
+    "коричневая полоска": "brown stripe", "чёрно-белая полоска": "black & white stripe",
+    "белая с синей полоской": "white with blue stripe",
+    // specs / use
+    "T/C 65/35 · ширина 58″ (≈147 см)": "T/C 65/35 · width 58″ (≈147 cm)",
+    "школьная форма, медформа, рубашки": "school uniforms, medical uniforms, shirts", "рубашки": "shirts"
   };
 
   var CIS = /^(ru|ky|kk|uz|uk|be|tg|tk|az|hy|ka)\b/i;
@@ -156,6 +174,8 @@
     document.getElementById("sh-col").textContent = tr(p.collection) + " · №" + p.n;
     document.getElementById("sh-title").textContent = title(p);
     document.getElementById("sh-code").textContent = code(p);
+    var sp = document.getElementById("sh-spec"); sp.textContent = tr(p.spec || ""); sp.hidden = !p.spec;
+    var us = document.getElementById("sh-use"); us.textContent = p.use ? L().use + tr(p.use) : ""; us.hidden = !p.use;
     document.getElementById("sh-order").href = wa(S.whatsapp, orderMsg(p));
     var w = document.getElementById("sh-wa"); w.hidden = !p.wa; if (p.wa) w.href = p.wa;
   }
