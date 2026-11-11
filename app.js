@@ -40,7 +40,7 @@
     "Х/Б Cotton полоска P127": "Quilted cotton stripe P127",
     "Х/Б полоска": "Cotton stripe", "Лён Х/Б полоска": "Linen-cotton stripe", "Х/Б Cotton полоска, стёганая": "Quilted cotton stripe",
     // colours
-    "ярко-синий": "royal blue", "сиреневый": "lilac", "фиолетовый": "purple", "фисташковый": "pistachio",
+    "ярко-синий": "royal blue", "бирюзовый": "teal", "ярко-зелёный": "bright green", "сиреневый": "lilac", "фиолетовый": "purple", "фисташковый": "pistachio",
     "коньячный": "cognac", "малиновый": "crimson", "сине-фиолетовый": "violet", "жёлтый": "yellow",
     "тёмно-синяя полоска": "navy stripe", "бордовая полоска": "burgundy stripe", "оливковая полоска": "olive stripe",
     "серо-голубая полоска": "grey-blue stripe", "голубая полоска": "light blue stripe", "синяя полоска": "blue stripe",
