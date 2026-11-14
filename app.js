@@ -4,24 +4,24 @@
   /* ---------- i18n ---------- */
   var UI = {
     ru: {
-      shop: "Ала-Тоо · A2/1-22", city: "бывш. Мадина · Бишкек",
-      t1: "Оптом", t2: "Премиум ткани", t3: "Рынок Ала-Тоо (бывш. Мадина), A2/1-22",
+      shop: "Ала-Тоо · A2/1-22 С", city: "бывш. Мадина · Бишкек",
+      t1: "Оптом", t2: "Премиум ткани", t3: "Рынок Ала-Тоо (бывш. Мадина), A2/1-22 С",
       code: "Код", order: "Заказать", openwa: "Открыть в каталоге WhatsApp ↗",
-      soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A2/1-22", orderAria: "Заказать в WhatsApp",
+      soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A2/1-22 С", orderAria: "Заказать в WhatsApp",
       note: "Только оптом · рулонами (~100 м)", use: "Для: ",
       hello: "Здравствуйте! Пишу с сайта.",
       msg: function (t, code, n) { return "Здравствуйте! Ткань оптом: " + t + ", код " + code + " (№" + n + "). Рулонов: "; },
-      title: "Ткани оптом · Ала-Тоо A2/1-22"
+      title: "Ткани оптом · Ала-Тоо A2/1-22 С"
     },
     en: {
-      shop: "Ala-Too · A2/1-22", city: "ex-Madina · Bishkek",
-      t1: "Wholesale", t2: "Premium fabrics", t3: "Ala-Too Market (ex-Madina), A2/1-22",
+      shop: "Ala-Too · A2/1-22 C", city: "ex-Madina · Bishkek",
+      t1: "Wholesale", t2: "Premium fabrics", t3: "Ala-Too Market (ex-Madina), A2/1-22 C",
       code: "Code", order: "Order", openwa: "Open in WhatsApp catalog ↗",
-      soon: "photo soon", addr: "Ala-Too Market, Block A, A2/1-22", orderAria: "Order on WhatsApp",
+      soon: "photo soon", addr: "Ala-Too Market, Block A, A2/1-22 C", orderAria: "Order on WhatsApp",
       note: "Wholesale only · by the roll (~100 m)", use: "For: ",
       hello: "Hello! I'm writing from your website.",
       msg: function (t, code, n) { return "Hello! Wholesale fabric: " + t + ", code " + code + " (No. " + n + "). Rolls: "; },
-      title: "Wholesale fabrics · Ala-Too A2/1-22"
+      title: "Wholesale fabrics · Ala-Too A2/1-22 C"
     }
   };
   // product words (RU in products.js -> EN)
