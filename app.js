@@ -35,7 +35,7 @@
     "тёмно-зелёный": "dark green", "тёмно-синий": "navy",
     "Стрейч хлопок-лён, лёгкий и дышащий": "Stretch cotton-linen, light and breathable",
     // current catalog (series / names)
-    "Х/Б стрейч T/C K": "Stretch cotton T/C K", "Х/Б полоска 58": "Cotton stripe 58", "Х/Б полоска 61B": "Cotton stripe 61B",
+    "Х/Б стрейч T/C K": "Stretch cotton T/C K", "Х/Б полоска 58": "Cotton stripe 58", "Х/Б полоска 59": "Cotton stripe 59", "Х/Б полоска 61B": "Cotton stripe 61B",
     "Лён Х/Б полоска 68": "Linen-cotton stripe 68", "Лён Х/Б полоска 69": "Linen-cotton stripe 69",
     "Х/Б Cotton полоска P127": "Quilted cotton stripe P127",
     "Х/Б полоска": "Cotton stripe", "Лён Х/Б полоска": "Linen-cotton stripe", "Х/Б Cotton полоска, стёганая": "Quilted cotton stripe",
@@ -48,7 +48,7 @@
     "коричневая полоска": "brown stripe", "чёрно-белая полоска": "black & white stripe",
     "белая с синей полоской": "white with blue stripe",
     // specs / use
-    "T/C 65/35 · ширина 58″ (≈147 см)": "T/C 65/35 · width 58″ (≈147 cm)",
+    "ширина ~150 см": "width ~150 cm",
     "школьная форма, медформа, рубашки": "school uniforms, medical uniforms, shirts", "рубашки": "shirts"
   };
 
