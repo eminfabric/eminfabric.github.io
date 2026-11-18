@@ -4,24 +4,24 @@
   /* ---------- i18n ---------- */
   var UI = {
     ru: {
-      shop: "Ала-Тоо · A2/1-22 С", city: "бывш. Мадина · Бишкек",
-      t1: "Оптом", t2: "Премиум ткани", t3: "Рынок Ала-Тоо (бывш. Мадина), A2/1-22 С",
+      shop: "Ала-Тоо · A1/2-22 С", city: "бывш. Мадина · Бишкек",
+      t1: "Оптом", t2: "Премиум ткани", t3: "Рынок Ала-Тоо (бывш. Мадина), A1/2-22 С",
       code: "Код", order: "Заказать", openwa: "Открыть в каталоге WhatsApp ↗",
-      soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A2/1-22 С", orderAria: "Заказать в WhatsApp",
+      soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A1/2-22 С", orderAria: "Заказать в WhatsApp",
       note: "Только оптом · рулонами (~100 м)", use: "Для: ",
       hello: "Здравствуйте! Пишу с сайта.",
       msg: function (t, code, n) { return "Здравствуйте! Ткань оптом: " + t + ", код " + code + " (№" + n + "). Рулонов: "; },
-      title: "Ткани оптом · Ала-Тоо A2/1-22 С"
+      title: "Ткани оптом · Ала-Тоо A1/2-22 С"
     },
     en: {
-      shop: "Ala-Too · A2/1-22 C", city: "ex-Madina · Bishkek",
-      t1: "Wholesale", t2: "Premium fabrics", t3: "Ala-Too Market (ex-Madina), A2/1-22 C",
+      shop: "Ala-Too · A1/2-22 C", city: "ex-Madina · Bishkek",
+      t1: "Wholesale", t2: "Premium fabrics", t3: "Ala-Too Market (ex-Madina), A1/2-22 C",
       code: "Code", order: "Order", openwa: "Open in WhatsApp catalog ↗",
-      soon: "photo soon", addr: "Ala-Too Market, Block A, A2/1-22 C", orderAria: "Order on WhatsApp",
+      soon: "photo soon", addr: "Ala-Too Market, Block A, A1/2-22 C", orderAria: "Order on WhatsApp",
       note: "Wholesale only · by the roll (~100 m)", use: "For: ",
       hello: "Hello! I'm writing from your website.",
       msg: function (t, code, n) { return "Hello! Wholesale fabric: " + t + ", code " + code + " (No. " + n + "). Rolls: "; },
-      title: "Wholesale fabrics · Ala-Too A2/1-22 C"
+      title: "Wholesale fabrics · Ala-Too A1/2-22 C"
     }
   };
   // product words (RU in products.js -> EN)
@@ -170,7 +170,19 @@
   var sheet = document.getElementById("sheet"), cur = 0;
   function show(i) {
     cur = (i + P.length) % P.length; var p = P[cur];
-    document.getElementById("sh-media").innerHTML = p.img ? '<img src="' + p.img + '" alt="' + title(p) + ' ' + code(p) + '">' : '<div class="ph"><span>' + L().soon + '</span></div>';
+    var media = document.getElementById("sh-media"), alt = title(p) + ' ' + code(p);
+    if (p.models) {   // galeri: kıyafet modelleri + sade kumaş
+      var pics = p.models.concat([p.fabric]);
+      media.innerHTML = '<div class="gal">' + pics.map(function (src) { return '<img src="' + src + '" alt="' + alt + '">'; }).join("") + '</div>' +
+        '<div class="gal__dots">' + pics.map(function (_, i) { return '<i' + (i ? '' : ' class="on"') + '></i>'; }).join("") + '</div>';
+      var g = media.querySelector(".gal"), dots = media.querySelectorAll(".gal__dots i");
+      g.addEventListener("scroll", function () {
+        var k = Math.round(g.scrollLeft / g.clientWidth);
+        dots.forEach(function (d, i) { d.className = i === k ? "on" : ""; });
+      }, { passive: true });
+    } else {
+      media.innerHTML = p.img ? '<img src="' + p.img + '" alt="' + alt + '">' : '<div class="ph"><span>' + L().soon + '</span></div>';
+    }
     document.getElementById("sh-col").textContent = tr(p.collection) + " · №" + p.n;
     document.getElementById("sh-title").textContent = title(p);
     document.getElementById("sh-code").textContent = code(p);

@@ -127,3 +127,11 @@ main { padding: 18px 0 40px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal .card { opacity: 1; transform: none; }
 }
+
+/* kumaş + kıyafet galerisi (detay) */
+.gal { display: flex; width: 100%; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.gal::-webkit-scrollbar { display: none; }
+.gal img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; scroll-snap-align: start; }
+.gal__dots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; justify-content: center; gap: 6px; pointer-events: none; }
+.gal__dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.5); box-shadow: 0 0 3px rgba(0,0,0,.35); }
+.gal__dots i.on { background: #fff; }

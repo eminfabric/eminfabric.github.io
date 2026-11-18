@@ -1,5 +1,5 @@
 /*
-  Каталог — Ткани • Ала-Тоо (Мадина) A2/1-22 С
+  Каталог — Ткани • Ала-Тоо (Мадина) A1/2-22 С
   Актуальные товары (съёмка 10.11.2026). Источник данных: assets/katalog/katalog-tablosu.csv + этикетки.
   Каждое фото сверено с этикеткой своего кода (кадр с этикеткой → ткань под этой этикеткой).
   img   = img/<код>.webp (4:5)
@@ -8,9 +8,9 @@
   Продажа только оптом, рулонами; цены не публикуются.
 */
 window.SHOP = {
-  name: "Ткани • Ала-Тоо (Мадина) A2/1-22 С",
+  name: "Ткани • Ала-Тоо (Мадина) A1/2-22 С",
   wholesaleOnly: true,
-  address: "Рынок Ала-Тоо (бывш. Мадина), блок А, A2/1-22 С, Бишкек",
+  address: "Рынок Ала-Тоо (бывш. Мадина), блок А, A1/2-22 С, Бишкек",
   whatsapp: "996502982798",
   whatsapp2: "996501915793",
   phone: "+996509641888",
@@ -56,6 +56,29 @@ window.SHOP = {
     ]}
   ];
 
+  // Kumaş + uygun kıyafet modeli görselleri (img/model/). Kıyafet rengi gerçek kumaş fotoğrafına eşlendi;
+  // yalnız deseni/rengi kumaşla uyan modeller. İlk görsel kartta görünür; detayda kaydırmalı galeri + sade kumaş.
+  var MODELS = {
+    "K-4": ["img/model/K-4.webp", "img/model/K-4-forma.webp", "img/model/K-4-forma-erkek.webp", "img/model/K-4-medforma.webp"],
+    "K-01": ["img/model/K-01.webp"],
+    "K-6": ["img/model/K-6.webp"],
+    "K-10": ["img/model/K-10.webp"],
+    "K-12": ["img/model/K-12.webp"],
+    "K-14": ["img/model/K-14.webp"],
+    "58-25": ["img/model/58-25.webp"],
+    "61B-2": ["img/model/61B-2.webp"],
+    "61B-4": ["img/model/61B-4.webp"],
+    "61B-5": ["img/model/61B-5.webp"],
+    "61B-15": ["img/model/61B-15.webp"],
+    "61B-16": ["img/model/61B-16.webp"],
+    "61B-17": ["img/model/61B-17.webp"],
+    "68-5": ["img/model/68-5.webp"],
+    "68-10": ["img/model/68-10.webp"],
+    "68-13": ["img/model/68-13.webp"],
+    "69-1": ["img/model/69-1.webp"],
+    "69-10": ["img/model/69-10.webp"]
+  };
+
   var out = [], n = 0;
   SERIES.forEach(function (s) {
     s.items.forEach(function (it) {
@@ -64,7 +87,9 @@ window.SHOP = {
         n: (n < 10 ? "0" : "") + n,
         name: s.name, color: it[1], code: it[0],
         collection: s.collection, spec: s.spec, use: s.use,
-        img: "img/" + it[0] + ".webp"
+        img: MODELS[it[0]] ? MODELS[it[0]][0] : "img/" + it[0] + ".webp",
+        fabric: "img/" + it[0] + ".webp",
+        models: MODELS[it[0]] || null
       });
     });
   });
