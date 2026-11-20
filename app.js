@@ -53,7 +53,7 @@
     "белая с синей полоской": "white with blue stripe",
     // specs / use
     "ширина ~150 см": "width ~150 cm",
-    "школьная форма, медформа, рубашки": "school uniforms, medical uniforms, shirts", "рубашки": "shirts"
+    "школьная форма, медформа, рубашки": "school uniforms, medical uniforms, shirts", "рубашки": "shirts", "рубашки, в т.ч. школьные": "shirts, incl. school shirts"
   };
 
   var CIS = /^(ru|ky|kk|uz|uk|be|tg|tk|az|hy|ka)\b/i;
