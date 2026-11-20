@@ -32,7 +32,7 @@ window.SHOP = {
 
   // [код, цвет, фото]  — порядок = порядок на сайте
   var SERIES = [
-    { collection: "Х/Б стрейч T/C K", name: "Х/Б стрейч", spec: SPEC_K, use: "школьная форма, медформа, рубашки", items: [
+    { collection: "Х/Б стрейч T/C K", name: "Х/Б стрейч", spec: SPEC_K, use: "рубашки", items: [
       ["K-01", "чёрный"], ["K-4", "ярко-синий"], ["K-6", "сиреневый"], ["K-10", "фиолетовый"],
       ["K-12", "бирюзовый"], ["K-14", "тёмно-зелёный"], ["K-24", "фисташковый"], ["K-38", "ярко-зелёный"], ["K-39", "тёмно-синий"],
       ["K-42", ""], ["K-44", ""], ["K-46", "коньячный"], ["K-50", "малиновый"],
@@ -65,7 +65,7 @@ window.SHOP = {
   // Kumaş + uygun kıyafet modeli görselleri (img/model/). Kıyafet rengi gerçek kumaş fotoğrafına eşlendi;
   // yalnız deseni/rengi kumaşla uyan modeller. İlk görsel kartta görünür; detayda kaydırmalı galeri + sade kumaş.
   var MODELS = {
-    "K-4": ["img/model/K-4.webp", "img/model/K-4-forma.webp", "img/model/K-4-forma-erkek.webp", "img/model/K-4-medforma.webp"],
+    "K-4": ["img/model/K-4.webp", "img/model/K-4-forma-erkek.webp"],   // 20.11: K-4 тонкая — только мужские рубашки (медформа/юбка убраны)
     "K-01": ["img/model/K-01.webp"],
     "K-6": ["img/model/K-6.webp"],
     "K-10": ["img/model/K-10.webp"],
