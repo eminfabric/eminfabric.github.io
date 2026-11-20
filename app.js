@@ -11,7 +11,7 @@
       note: "Только оптом · рулонами (~100 м)", use: "Для: ",
       hello: "Здравствуйте! Пишу с сайта.",
       msg: function (t, code, n) { return "Здравствуйте! Ткань оптом: " + t + ", код " + code + " (№" + n + "). Рулонов: "; },
-      title: "Ткани оптом в Бишкеке: Х/Б полоска, лён, стрейч T/C — рынок Ала-Тоо (Мадина)",
+      title: "Ткани оптом в Бишкеке: Х/Б полоска, лён, стрейч T/C — рынок Ала-Тоо (Мадина) | SELIM Fabric",
       h1: "Ткани оптом в Бишкеке — рынок Ала-Тоо (бывш. Мадина)",
       lead: "Х/Б полоска для рубашек, лён Х/Б полоска, однотонный Х/Б стрейч T/C — рулонами. Блок А, A1/2-22 С."
     },
@@ -23,7 +23,7 @@
       note: "Wholesale only · by the roll (~100 m)", use: "For: ",
       hello: "Hello! I'm writing from your website.",
       msg: function (t, code, n) { return "Hello! Wholesale fabric: " + t + ", code " + code + " (No. " + n + "). Rolls: "; },
-      title: "Wholesale fabrics in Bishkek: cotton stripe, linen, stretch T/C — Ala-Too Market",
+      title: "Wholesale fabrics in Bishkek: cotton stripe, linen, stretch T/C — Ala-Too Market | SELIM Fabric",
       h1: "Wholesale fabrics in Bishkek — Ala-Too Market (ex-Madina)",
       lead: "Cotton stripe shirting, linen-cotton stripe, plain stretch cotton T/C — by the roll. Block A, A1/2-22 C."
     }

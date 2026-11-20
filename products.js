@@ -20,7 +20,9 @@ window.SHOP = {
   // 2GIS: своей карточки пока нет → карточка комплекса «Ала-Тоо» (пр. Шабдан Баатыра, 2а/7; рядом кафе «Атуш», 2а/8).
   // Когда своя карточка откроется — вписать её в card2gis (/bishkek/firm/<id>): она заменит ссылку и попадёт в sameAs.
   map2gis: "https://2gis.kg/bishkek/firm/70000001119069965",
-  card2gis: ""
+  card2gis: "",
+  // Магазин: ежедневно 09:00–18:00 (пользователь 20.11); WhatsApp отвечает в любое время
+  hours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "09:00", closes: "18:00" }
 };
 
 (function () {
