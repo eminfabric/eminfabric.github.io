@@ -40,6 +40,11 @@ svg { width: 20px; height: 20px; flex: none; }
 .tabs a { flex: none; height: 34px; padding: 0 14px; display: grid; place-items: center; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--silver); font-size: 13px; transition: background .2s, color .2s; }
 .tabs a.is-on { background: #fff; color: var(--navy); }
 
+/* intro (H1) */
+.intro { padding: 8px 2px 4px; }
+.intro h1 { margin: 0 0 8px; font: 600 clamp(21px, 4.4vw, 30px)/1.15 var(--display); letter-spacing: -.015em; max-width: 24ch; text-wrap: balance; }
+.intro p { color: var(--muted); font-size: 14px; max-width: 62ch; }
+
 /* sections */
 main { padding: 18px 0 40px; }
 .sec { padding: 18px 0 26px; scroll-margin-top: 150px; }
