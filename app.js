@@ -4,7 +4,7 @@
   /* ---------- i18n ---------- */
   var UI = {
     ru: {
-      shop: "Ала-Тоо · A1/2-22 С", city: "бывш. Мадина · Бишкек",
+      shop: "SELIM Fabric", city: "Ала-Тоо · A1/2-22 С · Бишкек",
       t1: "Оптом", t2: "Рубашечные ткани, широкая палитра цветов", t3: "Рынок Ала-Тоо (бывш. Мадина), A1/2-22 С",
       code: "Код", order: "Заказать", openwa: "Открыть в каталоге WhatsApp ↗",
       soon: "фото скоро", addr: "Ала-Тоо (Мадина), блок А, A1/2-22 С", orderAria: "Заказать в WhatsApp",
@@ -16,7 +16,7 @@
       lead: "Х/Б полоска для рубашек, лён Х/Б полоска, однотонный Х/Б стрейч T/C — рулонами. Блок А, A1/2-22 С."
     },
     en: {
-      shop: "Ala-Too · A1/2-22 C", city: "ex-Madina · Bishkek",
+      shop: "SELIM Fabric", city: "Ala-Too · A1/2-22 C · Bishkek",
       t1: "Wholesale", t2: "Shirting fabrics, wide colour range", t3: "Ala-Too Market (ex-Madina), A1/2-22 C",
       code: "Code", order: "Order", openwa: "Open in WhatsApp catalog ↗",
       soon: "photo soon", addr: "Ala-Too Market, Block A, A1/2-22 C", orderAria: "Order on WhatsApp",

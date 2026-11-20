@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eminfabric.github.io/sitemap.xml
+Sitemap: https://selimfabric.github.io/sitemap.xml
