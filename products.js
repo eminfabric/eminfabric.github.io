@@ -15,7 +15,7 @@ window.SHOP = {
   whatsapp2: "996501915793",
   phone: "+996509641888",
   phoneLabel: "0509 641 888",
-  instagram: "tkani_alatoo_madina",
+  instagram: "tkani_selim_alatoo",
   catalog: "https://wa.me/c/996502982798",
   // 2GIS: своей карточки пока нет → карточка комплекса «Ала-Тоо» (пр. Шабдан Баатыра, 2а/7; рядом кафе «Атуш», 2а/8).
   // Когда своя карточка откроется — вписать её в card2gis (/bishkek/firm/<id>): она заменит ссылку и попадёт в sameAs.
